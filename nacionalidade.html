@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nacionalidade</title>
+</head>
+    <style>
+        input{
+            margin-right: 15px;
+        }
+    </style>
+<body>
+    <h1>NACIONALIDADE</h1>
+    Digite aqui o seu país :
+    <input type="text" name="país" id="país">
+    <input type="button" value="Enviar" onclick="Enviar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function Enviar(){
+        var n= window.document.querySelector('input#país')
+        var res = window.document.querySelector('div#res')
+        var nacio = (n.value)
+        
+        
+        if(nacio == 'Brasil' || nacio == 'brasil'|| nacio =='BRASIL'){
+            res.innerHTML = `<p>Olá conterrâneo, você é <strong>brasileiro</strong>, sentimos sua falta!</p>`
+        }else{ 
+            res.innerHTML = `<p>Olá, você não é brasileiro, mas, seja bem vindo!'`
+        }
+        }
+    </script>
+</body>
+</html>
